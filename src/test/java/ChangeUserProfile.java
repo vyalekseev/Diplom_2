@@ -1,23 +1,26 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import praktikum.methods.ChangeUserProfileMethods;
 import praktikum.methods.CreateUserMethods;
 import praktikum.methods.LoginUserMethods;
 import praktikum.request.CreateUserRequest;
 
 import static org.apache.http.HttpStatus.SC_OK;
-import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.hamcrest.Matchers.equalTo;
 import static praktikum.generator.CreateUserGenerator.createUser;
 
-public class LoginUserTest {
-    private LoginUserMethods loginUserMethods;
+public class ChangeUserProfile {
     private CreateUserMethods createUserMethods;
+    private ChangeUserProfileMethods changeUserProfileMethods;
     private String bearerToken;
+    private CreateUserRequest randomUser = createUser();
+
     @Before
     public void setUp() {
-        loginUserMethods = new LoginUserMethods();
         createUserMethods = new CreateUserMethods();
+        changeUserProfileMethods = new ChangeUserProfileMethods();
+
     }
 
     @After
@@ -30,8 +33,7 @@ public class LoginUserTest {
     }
 
     @Test
-    public void loginUser() {
-        CreateUserRequest randomUser = createUser();
+    public void updateUser() {
         String accessToken = createUserMethods.create(randomUser)
                 .assertThat()
                 .statusCode(SC_OK)
@@ -41,22 +43,15 @@ public class LoginUserTest {
                 .path("accessToken");
         bearerToken = accessToken.replaceAll("Bearer ", "");
 
-
-        loginUserMethods.login(randomUser)
+        CreateUserRequest updateUser = createUser();
+        changeUserProfileMethods.updateInfo(updateUser, bearerToken)
                 .assertThat()
                 .statusCode(SC_OK)
                 .and()
-                .body("success", equalTo(true));
-    }
-    @Test
-    public void loginUserNotExist() {
-        CreateUserRequest randomUser = createUser();
-        loginUserMethods.login(randomUser)
-                .assertThat()
-                .statusCode(SC_UNAUTHORIZED)
+                .body("success", equalTo(true))
                 .and()
-                .body("success", equalTo(false))
+                .body("user.email", equalTo(updateUser.getEmail()))
                 .and()
-                .body("message",equalTo("email or password are incorrect"));
+                .body("user.name", equalTo(updateUser.getName()));
     }
 }

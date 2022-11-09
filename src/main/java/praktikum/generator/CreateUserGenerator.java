@@ -11,4 +11,11 @@ public class CreateUserGenerator {
         createUserRequest.setName(RandomStringUtils.randomAlphabetic(5));
         return createUserRequest;
     }
+
+    public static CreateUserRequest createUserWithoutName() {
+        CreateUserRequest createUserRequest = new CreateUserRequest();
+        createUserRequest.setEmail(RandomStringUtils.randomAlphabetic(10) + "@test.ru");
+        createUserRequest.setPassword("123456");
+        return createUserRequest;
+    }
 }

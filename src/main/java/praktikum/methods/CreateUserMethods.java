@@ -21,7 +21,7 @@ public class CreateUserMethods extends RestClient {
     public ValidatableResponse delete(String bearerToken) {
         return given().log().all()
                 .spec(getDefaultRequest())
-                .auth().preemptive().oauth2(bearerToken)
+                .auth().oauth2(bearerToken)
                 .delete("/api/auth/user")
                 .prettyPeek()
                 .then();
