@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13cf4af6-28c6-4f07-906a-b78ee45018d0" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/src/main/java/praktikum/generator/ChangeUserProfileGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/praktikum/methods/ChangeUserProfileMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/praktikum/methods/LoginUserMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/praktikum/request/LoginUserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ChangeUserProfile.java" afterDir="false" />
+    <list default="true" id="13cf4af6-28c6-4f07-906a-b78ee45018d0" name="Changes" comment="ChangeUserProfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/praktikum/generator/CreateUserGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/praktikum/generator/CreateUserGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/praktikum/methods/CreateUserMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/praktikum/methods/CreateUserMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/praktikum/methods/ChangeUserProfileMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/praktikum/methods/ChangeUserProfileMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ChangeUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChangeUserProfileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +50,41 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CreateUserTest">
-    <configuration name="ChangeUserProfile.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ChangeUserProfileTest">
+    <configuration name="ChangeUserProfileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ChangeUserProfile" />
+      <option name="MAIN_CLASS_NAME" value="ChangeUserProfileTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChangeUserProfileTest.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ChangeUserProfileTest" />
       <option name="METHOD_NAME" value="updateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChangeUserProfileTest.updateUserWithAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ChangeUserProfileTest" />
+      <option name="METHOD_NAME" value="updateUserWithAuthorization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChangeUserProfileTest.updateUserWithoutAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ChangeUserProfileTest" />
+      <option name="METHOD_NAME" value="updateUserWithoutAuthorization" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,42 +99,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginUserTest.loginUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="METHOD_NAME" value="loginUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginUserTest.loginUserNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="METHOD_NAME" value="loginUserNotExist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ChangeUserProfileTest" />
+        <item itemvalue="JUnit.ChangeUserProfileTest.updateUserWithoutAuthorization" />
+        <item itemvalue="JUnit.ChangeUserProfileTest.updateUserWithAuthorization" />
+        <item itemvalue="JUnit.ChangeUserProfileTest.updateUser" />
         <item itemvalue="JUnit.CreateUserTest" />
-        <item itemvalue="JUnit.LoginUserTest" />
-        <item itemvalue="JUnit.ChangeUserProfile.updateUser" />
-        <item itemvalue="JUnit.LoginUserTest.loginUserNotExist" />
-        <item itemvalue="JUnit.LoginUserTest.loginUser" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667913173249</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ChangeUserProfile">
+      <created>1668027438057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668027438057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new" />
-    <option name="LAST_COMMIT_MESSAGE" value="new" />
+    <MESSAGE value="ChangeUserProfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChangeUserProfile" />
   </component>
 </project>
