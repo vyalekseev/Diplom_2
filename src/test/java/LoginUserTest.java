@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +31,7 @@ public class LoginUserTest {
     }
 
     @Test
+    @DisplayName("Авторизация пользователя")
     public void loginUser() {
         CreateUserRequest randomUser = createUser();
         String accessToken = createUserMethods.create(randomUser)
@@ -49,6 +51,7 @@ public class LoginUserTest {
                 .body("success", equalTo(true));
     }
     @Test
+    @DisplayName("Авторизация несуществующего пользователя")
     public void loginUserNotExist() {
         CreateUserRequest randomUser = createUser();
         loginUserMethods.login(randomUser)

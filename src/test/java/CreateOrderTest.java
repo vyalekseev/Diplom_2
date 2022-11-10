@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,6 +44,7 @@ public class CreateOrderTest {
     }
 
     @Test
+    @DisplayName("Создание заказа авторизованным пользователем")
     public void createOrderWithAuthorization() {
         CreateOrderRequest ingredients = createOrder();
         createOrderMethods = new CreateOrderMethods();
@@ -59,6 +61,7 @@ public class CreateOrderTest {
     }
 
     @Test
+    @DisplayName("Создание заказа без авторизации")
     public void createOrderWithoutAuthorization() {
         CreateOrderRequest ingredients = createOrder();
         createOrderMethods = new CreateOrderMethods();
@@ -73,6 +76,7 @@ public class CreateOrderTest {
     }
 
     @Test
+    @DisplayName("Создание заказа без ингредиентов и авторизации")
     public void createOrderWithoutIngredients() {
         CreateOrderRequest ingredients = orderWithoutIngredients();
         createOrderMethods = new CreateOrderMethods();
@@ -87,6 +91,7 @@ public class CreateOrderTest {
     }
 
     @Test
+    @DisplayName("Создание заказа с неверным хэшем ингредиента")
     public void createOrderWithWrongHash() {
         CreateOrderRequest ingredients = orderWithBadHash();
         createOrderMethods = new CreateOrderMethods();

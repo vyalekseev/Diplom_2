@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,6 +45,7 @@ public class GetOrderTest {
     }
 
     @Test
+    @DisplayName("Получение заказа авторизованным пользователем")
     public void getOrderWithAuthorization() {
         CreateOrderRequest ingredients = createOrder();
         createOrderMethods = new CreateOrderMethods();
@@ -69,6 +71,7 @@ public class GetOrderTest {
     }
 
     @Test
+    @DisplayName("Получение заказа без авторизации")
     public void getOrderWithoutAuthorization() {
         getOrdersMethods = new GetOrdersMethods();
         getOrdersMethods.getOrdersWithoutAuthorization()

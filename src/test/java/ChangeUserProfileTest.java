@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,6 +42,7 @@ public class ChangeUserProfileTest {
     }
 
     @Test
+    @DisplayName("Обновление данных авторизованного пользователя")
     public void updateUserWithAuthorization() {
         CreateUserRequest updateUser = createUser();
         changeUserProfileMethods.updateInfoAuthorization(updateUser, bearerToken)
@@ -54,7 +56,8 @@ public class ChangeUserProfileTest {
                 .body("user.name", equalTo(updateUser.getName()));
     }
 
-@Test
+    @Test
+    @DisplayName("Обновление данных неавторизованным пользователем")
     public void updateUserWithoutAuthorization() {
         CreateUserRequest updateUser = createUser();
         changeUserProfileMethods.updateInfoWithoutAuthorization(updateUser)

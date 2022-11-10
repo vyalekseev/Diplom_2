@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,6 +30,7 @@ public class CreateUserTest {
     }
 
     @Test
+    @DisplayName("Создание уникального пользователя")
     public void addUser() {
         CreateUserRequest randomUser = createUser();
         String accessToken = createUserMethods.create(randomUser)
@@ -42,6 +44,7 @@ public class CreateUserTest {
     }
 
     @Test
+    @DisplayName("Создание пользователя с существующими данными")
     public void addExistsUser() {
         CreateUserRequest randomUser = createUser();
         String accessToken = createUserMethods.create(randomUser)
@@ -62,6 +65,7 @@ public class CreateUserTest {
     }
 
     @Test
+    @DisplayName("Создание пользователя без обязательного поля")
     public void addUserWithoutName() {
         CreateUserRequest newUser = createUserWithoutName();
         createUserMethods.create(newUser)
